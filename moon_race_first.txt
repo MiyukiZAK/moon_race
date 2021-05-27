@@ -1,0 +1,65 @@
+#This is my first code to manage with Git.
+
+def roll_dice
+  rand(1..6)
+end
+
+# Pseudo-code
+# welcome the user to the game
+puts "MOON RACE"
+puts "🌛"
+# quick explanation of the rules
+puts "Welcome!"
+puts "Roll the dice and get to the Moon."
+# asked the user for the name
+puts "What is your name?"
+# get the name from the user
+user = gets.chomp
+puts "Hi, #{user}."
+# set opponent name
+opponent = "Rabbit"
+puts "You're competing with Peter 🐇."
+
+# set the user && opponent's starting position
+user_position = 0
+opponent_posisiton = 0
+
+
+# start the loop (until ... >= 10)
+until user_position >= 10 || opponent_posisiton >= 10
+
+# for the user ->
+  puts "Type R to roll the dice."
+  user_input = gets.chomp.upcase
+#  get random number from 1..6
+  if user_input == "R"
+    user_dice = roll_dice
+#  add that to the position
+    user_position += user_dice
+#  puts the new position
+    puts "🎲**#{user_dice}**"
+    puts "You're at #{user_position}/10."
+
+# for the oppponent ->
+#  get random number from 1..6
+  opponent_dice = roll_dice
+#  add that to the position
+  opponent_posisiton += opponent_dice
+#  puts the new position
+  puts "Peter🐇 is at #{opponent_posisiton}/10."
+  else
+    puts "Incorrect input. Try again!"
+# end the loop
+  end
+end
+
+# display the winner of the race
+if user_position >= 10
+  puts "You won! Enjoy your stay in the Moon.🌝"
+  puts "Don't forget taking an oxygen tank!"
+else
+  puts "Peter🐇 won the game. It's now the boss of the Moon. You'll see its shape on the full Moon.🌝"
+end
+
+
+
