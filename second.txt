@@ -1,1 +1,2 @@
 I am practicing how to use Git.
+Using "git status" to check 
