@@ -1,5 +1,6 @@
 #This is my first code to manage with Git.
 #I am not sure if I needed to install the desktop GitHub.
+#2021.5.29 managed to handle
 
 def roll_dice
   rand(1..6)
